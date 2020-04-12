@@ -5,7 +5,7 @@ import { offerDetailActions } from './store/modules/offer-detail';
 
 function App() {
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.offerDetail);
+  const loading = useSelector((state) => state.offerDetail.loading);
 
   useEffect(() => {
     setTimeout(() => {
@@ -13,7 +13,7 @@ function App() {
     }, 3000);
   }, []);
 
-  return <div>{`State = ${state}`}</div>;
+  return <div>{`State = ${loading}`}</div>;
 }
 
 export default App;
